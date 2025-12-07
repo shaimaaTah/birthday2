@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8" />
+    <title>عيد ميلاد سعيد مروة 🎂</title>
+
+    <!-- خطوط عربية متطورة -->
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;600;700&family=Tajawal:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- أيقونات إضافية -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "El Messiri", "Tajawal", sans-serif;
+            direction: rtl;
+            background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #a18cd1, #fbc2eb);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+            padding: 20px;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* تأثيرات جسيمات الخلفية */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .particle {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            animation: floatParticle linear infinite;
+        }
+
+        @keyframes floatParticle {
+            to { transform: translateY(-100vh); }
+        }
+
+        /* كارت رئيسي متطور */
+        .card-container {
+            position: relative;
+            width: min(92%, 560px);
+            perspective: 1000px;
+            z-index: 10;
+        }
+
+        .card {
+            position: relative;
+            width: 100%;
+            padding: 3rem 2.5rem;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.22);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4),
+                0 0 0 1px rgba(255, 255, 255, 0.15);
+            text-align: center;
+            color: #3a2642;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            animation: cardEntrance 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 2;
+        }
+
+        @keyframes cardEntrance {
+            0% { opacity: 0; transform: translateY(50px) rotateX(-10deg); }
+            100% { opacity: 1; transform: translateY(0) rotateX(0); }
+        }
+
+        /* تأثير اللمعان داخل الكارت */
+        .card::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom right,
+                rgba(255, 255, 255, 0.1) 0%,
+                rgba(255, 255, 255, 0) 50%
+            );
+            transform: rotate(30deg);
+            pointer-events: none;
+        }
+
+        /* إطار زخرفي */
+        .card-border {
+            position: absolute;
+            inset: 0;
+            border-radius: 30px;
+            padding: 4px;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            animation: borderRotate 10s linear infinite;
+        }
+
+        @keyframes borderRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* العنوان الرئيسي */
+        .title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #e85a8b, #ff758c, #ff9a9e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 15px rgba(232, 90, 139, 0.2);
+            animation: titleGlow 2.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes titleGlow {
+            0% { filter: drop-shadow(0 4px 15px rgba(232, 90, 139, 0.3)); }
+            100% { filter: drop-shadow(0 4px 25px rgba(232, 90, 139, 0.5)); }
+        }
+
+        /* قسم الاسم المميز */
+        .name-section {
+            position: relative;
+            margin: 1.5rem 0 1rem;
+            padding: 1rem;
+            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(255, 182, 193, 0.2), rgba(255, 182, 193, 0.05));
+            backdrop-filter: blur(5px);
+            overflow: hidden;
+            animation: nameSectionEntrance 1.5s ease-out forwards;
+            animation-delay: 0.3s;
+            opacity: 0;
+        }
+
+        @keyframes nameSectionEntrance {
+            0% { transform: translateY(20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .name-label {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #8a4b7c;
+            margin-bottom: 0.5rem;
+        }
+
+        .name {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #d63384;
+            text-shadow: 0 3px 10px rgba(214, 51, 132, 0.3);
+            position: relative;
+            display: inline-block;
+            animation: namePulse 3s infinite;
+        }
+
+        @keyframes namePulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* تأثير القلب حول الاسم */
+        .name::before, .name::after {
+            content: "💖";
+            position: absolute;
+            font-size: 1.8rem;
+            top: 50%;
+            transform: translateY(-50%);
+            animation: heartFloat 4s ease-in-out infinite;
+        }
+
+        .name::before {
+            right: -2.5rem;
+            animation-delay: 0.5s;
+        }
+
+        .name::after {
+            left: -2.5rem;
+            animation-delay: 1s;
+        }
+
+        @keyframes heartFloat {
+            0%, 100% { transform: translateY(-50%) scale(1); }
+            50% { transform: translateY(-60%) scale(1.2); }
+        }
+
+        /* الرسالة */
+        .message {
+            margin-top: 1.2rem;
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: #4b2f52;
+            padding: 0 0.5rem;
+            animation: messageFadeIn 1.8s ease-out forwards;
+            animation-delay: 0.6s;
+            opacity: 0;
+        }
+
+        @keyframes messageFadeIn {
+            0% { transform: translateY(30px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        /* الأزرار */
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            margin-top: 2rem;
+            animation: buttonsEntrance 1.8s ease-out forwards;
+            animation-delay: 0.9s;
+            opacity: 0;
+        }
+
+        @keyframes buttonsEntrance {
+            0% { transform: translateY(40px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .btn {
+            position: relative;
+            padding: 0.9rem 2.2rem;
+            border-radius: 50px;
+            border: none;
+            font-family: "El Messiri", sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.7rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            color: #6b3f6b;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:active {
+            transform: translateY(-2px);
+        }
+
+        /* الزخارف الجانبية */
+        .decoration {
+            position: absolute;
+            font-size: 2.5rem;
+            z-index: 1;
+            opacity: 0.8;
+            animation: decorationFloat 6s ease-in-out infinite alternate;
+        }
+
+        .dec-1 { top: 20px; left: 25px; animation-delay: 0s; color: #ff9a9e; }
+        .dec-2 { top: 20px; right: 25px; animation-delay: 1s; color: #fbc2eb; }
+        .dec-3 { bottom: 20px; left: 30px; animation-delay: 2s; color: #a18cd1; }
+        .dec-4 { bottom: 20px; right: 30px; animation-delay: 3s; color: #fad0c4; }
+
+        @keyframes decorationFloat {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(-15px) rotate(10deg); }
+        }
+
+        /* الشموع */
+        .candles {
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.8rem;
+            z-index: 3;
+        }
+
+        .candle {
+            width: 24px;
+            height: 60px;
+            border-radius: 12px 12px 4px 4px;
+            position: relative;
+        }
+
+        .candle-1 { background: linear-gradient(to bottom, #ff9a9e, #ff758c); }
+        .candle-2 { background: linear-gradient(to bottom, #fbc2eb, #f8a8e0); }
+        .candle-3 { background: linear-gradient(to bottom, #a18cd1, #8a75c5); }
+        .candle-4 { background: linear-gradient(to bottom, #fad0c4, #f7b9a4); }
+        .candle-5 { background: linear-gradient(to bottom, #ffdfba, #ffcc8f); }
+
+        .candle::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 10px;
+            background: inherit;
+            top: -5px;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .flame {
+            position: absolute;
+            width: 16px;
+            height: 30px;
+            background: linear-gradient(to bottom, #ffef00, #ff9d00);
+            border-radius: 50% 50% 20% 20%;
+            top: -32px;
+            left: 4px;
+            animation: flameFlicker 0.5s ease-in-out infinite alternate;
+            box-shadow: 0 0 20px #ff9d00, 0 0 40px rgba(255, 157, 0, 0.5);
+        }
+
+        @keyframes flameFlicker {
+            0% { transform: scaleY(1) skewX(0deg); }
+            100% { transform: scaleY(1.1) skewX(5deg); }
+        }
+
+        /* بالونات متطورة */
+        .balloons {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .balloon {
+            position: absolute;
+            bottom: -120px;
+            width: 70px;
+            height: 90px;
+            border-radius: 50% 50% 45% 45%;
+            box-shadow: inset -10px -10px 10px rgba(0, 0, 0, 0.1);
+            animation: balloonFloat 15s linear infinite;
+            z-index: 0;
+        }
+
+        .balloon::after {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.8);
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -80px;
+        }
+
+        .balloon:nth-child(1) { 
+            left: 10%; 
+            background: radial-gradient(circle at 30% 20%, #fff, #ffb3c6 60%);
+            animation-duration: 18s; 
+            animation-delay: 0s; 
+        }
+        .balloon:nth-child(2) { 
+            left: 25%; 
+            background: radial-gradient(circle at 30% 20%, #fff, #ffdfba 60%);
+            animation-duration: 20s; 
+            animation-delay: 1.5s; 
+        }
+        .balloon:nth-child(3) { 
+            left: 45%; 
+            background: radial-gradient(circle at 30% 20%, #fff, #c9e4de 60%);
+            animation-duration: 16s; 
+            animation-delay: 0.7s; 
+        }
+        .balloon:nth-child(4) { 
+            left: 65%; 
+            background: radial-gradient(circle at 30% 20%, #fff, #f1c0e8 60%);
+            animation-duration: 22s; 
+            animation-delay: 2s; 
+        }
+        .balloon:nth-child(5) { 
+            left: 85%; 
+            background: radial-gradient(circle at 30% 20%, #fff, #a18cd1 60%);
+            animation-duration: 19s; 
+            animation-delay: 1s; 
+        }
+
+        @keyframes balloonFloat {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            100% { transform: translateY(-120vh) rotate(20deg); opacity: 0; }
+        }
+
+        /* تذييل الكارت */
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: rgba(107, 63, 107, 0.7);
+            animation: fadeIn 2s ease-out forwards;
+            animation-delay: 1.2s;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* زر التمرير المتطور */
+        .scroll-btn {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(255, 118, 148, 0.5);
+            border: none;
+            z-index: 1000;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: scrollBtnEntrance 1s ease-out forwards;
+            animation-delay: 1.5s;
+            opacity: 0;
+        }
+
+        .scroll-btn:hover {
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: 0 15px 35px rgba(255, 118, 148, 0.7);
+        }
+
+        .scroll-btn.up {
+            bottom: 110px;
+            background: linear-gradient(135deg, #a18cd1, #8a75c5);
+            box-shadow: 0 10px 25px rgba(161, 140, 209, 0.5);
+        }
+
+        .scroll-btn.up:hover {
+            box-shadow: 0 15px 35px rgba(161, 140, 209, 0.7);
+        }
+
+        .scroll-btn.down {
+            bottom: 30px;
+        }
+
+        @keyframes scrollBtnEntrance {
+            0% { transform: translateY(30px) scale(0.8); opacity: 0; }
+            100% { transform: translateY(0) scale(1); opacity: 1; }
+        }
+
+        /* إخفاء زر التمرير عند الوصول للأعلى/الأسفل */
+        .scroll-btn.hidden {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        /* نبضات حول زر التمرير */
+        .scroll-btn::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: inherit;
+            z-index: -1;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.8; }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
+
+        /* التكيف مع الشاشات الصغيرة */
+        @media (max-width: 768px) {
+            .card {
+                padding: 2.2rem 1.8rem;
+                border-radius: 25px;
+            }
+            
+            .title {
+                font-size: 2.2rem;
+            }
+            
+            .name {
+                font-size: 2rem;
+            }
+            
+            .message {
+                font-size: 1rem;
+            }
+            
+            .buttons {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .candles {
+                top: -30px;
+            }
+            
+            .candle {
+                width: 18px;
+                height: 45px;
+            }
+            
+            .scroll-btn {
+                right: 20px;
+                bottom: 20px;
+                width: 55px;
+                height: 55px;
+                font-size: 1.6rem;
+            }
+            
+            .scroll-btn.up {
+                bottom: 90px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- جسيمات الخلفية -->
+    <div class="particles" id="particles"></div>
+
+    <!-- بالونات -->
+    <div class="balloons">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
+
+    <!-- أزرار التمرير -->
+    <button class="scroll-btn up hidden" id="scrollUp" title="تمرير للأعلى">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+    
+    <button class="scroll-btn down" id="scrollDown" title="تمرير للأسفل">
+        <i class="fas fa-chevron-down"></i>
+    </button>
+
+    <!-- الحاوية الرئيسية -->
+    <div class="card-container">
+        <!-- الشموع -->
+        <div class="candles">
+            <div class="candle candle-1"><div class="flame"></div></div>
+            <div class="candle candle-2"><div class="flame"></div></div>
+            <div class="candle candle-3"><div class="flame"></div></div>
+            <div class="candle candle-4"><div class="flame"></div></div>
+            <div class="candle candle-5"><div class="flame"></div></div>
+        </div>
+
+        <!-- الكرت -->
+        <div class="card">
+            <!-- الإطار الزخرفي -->
+            <div class="card-border"></div>
+            
+            <!-- الزخارف -->
+            <div class="decoration dec-1">❁</div>
+            <div class="decoration dec-2">❁</div>
+            <div class="decoration dec-3">❁</div>
+            <div class="decoration dec-4">❁</div>
+
+            <!-- المحتوى -->
+            <h1 class="title">🎂 عيد ميلاد سعيد 🎉</h1>
+
+            <!-- قسم الاسم المميز -->
+            <div class="name-section">
+                <div class="name-label">كل سنة وإنتِ طيبة يا</div>
+                <div class="name">مـــروة 💐</div>
+            </div>
+
+            <!-- الرسالة -->
+            <p class="message">
+                 مروة، كل عام وأنتِ بألف خير يا حبيبة قلبي  🌟<br>
+                بتمنالك عام حلو و مليان إنجازات، وبتمانلك أعلى العلامات وأعلى النجاحات والصحة دايما وأبدا، ووربي يجعل ضحكتك دايما عوجهك ويبعد عنك كل الأشخاص المؤذيين بحياتك.<br>
+                ربنا يحقق كل أحلامكِ اللي في بالكِ ويكون هذا العام بداية أحلى الفصول في حياتك.<br>
+                صح مضغوطيين امتحانات بس الأكيد إني ما رح أنسى أعايدك يا مروة لإنه عنجد بحبك من كل قلبي  💗
+            </p>
+
+            <!-- الأزرار -->
+            <div class="buttons">
+                <button class="btn btn-primary">
+                    <i class="fas fa-gift"></i>
+                    <span>هدية خاصة لكِ 🎁</span>
+                </button>
+                <button class="btn btn-secondary">
+                    <i class="fas fa-heart"></i>
+                    <span>من القلب للقلب 💌</span>
+                </button>
+            </div>
+
+            <!-- التذييل -->
+            <div class="footer">
+                من شيماء صاحبتك  ❤️
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // إنشاء جسيمات خلفية متحركة
+        document.addEventListener('DOMContentLoaded', function() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 80;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // أحجام وألوان عشوائية
+                const size = Math.random() * 5 + 2;
+                const color = `rgba(255, ${Math.floor(Math.random() * 200 + 55)}, ${Math.floor(Math.random() * 200 + 55)}, ${Math.random() * 0.6 + 0.2})`;
+                
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.backgroundColor = color;
+                
+                // مواقع عشوائية
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100 + 100}%`;
+                
+                // مدة وسرعة عشوائية
+                const duration = Math.random() * 20 + 10;
+                const delay = Math.random() * 5;
+                
+                particle.style.animation = `floatParticle ${duration}s linear infinite`;
+                particle.style.animationDelay = `${delay}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+            
+            // إضافة تأثير تفاعلي عند النقر على الأزرار
+            const buttons = document.querySelectorAll('.btn');
+            
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // تأثير النقر
+                    this.style.transform = 'scale(0.95)';
+                    
+                    // إنشاء تأثير شرر صغير
+                    for (let i = 0; i < 12; i++) {
+                        createSpark(this);
+                    }
+                    
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 200);
+                    
+                    // رسالة خاصة عند النقر
+                    if (this.classList.contains('btn-primary')) {
+                        setTimeout(() => {
+                            alert('🎁 مروة الغالية!\nاسفة ما جبتلك هدية هههههههه !\nكل عام وأنتِ الأجمل! 💖');
+                        }, 300);
+                    } else {
+                        setTimeout(() => {
+                            alert('💌 رسالة من القلب الله يوفقك بامتحان بكرا:\nI love you!\nشكراً لأنكِ صاحبة  رائعة لإنك مهونة علي الجامعة وضغطها  🌸');
+                        }, 300);
+                    }
+                });
+            });
+            
+            // دالة لإنشاء شرر صغير
+            function createSpark(element) {
+                const spark = document.createElement('div');
+                spark.style.position = 'absolute';
+                spark.style.width = '6px';
+                spark.style.height = '6px';
+                spark.style.borderRadius = '50%';
+                spark.style.backgroundColor = getComputedStyle(element).backgroundImage.includes('ff758c') 
+                    ? '#ff9a9e' 
+                    : '#a18cd1';
+                spark.style.zIndex = '100';
+                
+                const rect = element.getBoundingClientRect();
+                const x = rect.left + rect.width / 2;
+                const y = rect.top + rect.height / 2;
+                
+                spark.style.left = `${x}px`;
+                spark.style.top = `${y}px`;
+                
+                document.body.appendChild(spark);
+                
+                // حركة عشوائية
+                const angle = Math.random() * Math.PI * 2;
+                const velocity = 3 + Math.random() * 4;
+                const vx = Math.cos(angle) * velocity;
+                const vy = Math.sin(angle) * velocity;
+                
+                let posX = x;
+                let posY = y;
+                let opacity = 1;
+                
+                function animateSpark() {
+                    posX += vx;
+                    posY += vy;
+                    opacity -= 0.05;
+                    
+                    spark.style.left = `${posX}px`;
+                    spark.style.top = `${posY}px`;
+                    spark.style.opacity = opacity;
+                    
+                    if (opacity > 0) {
+                        requestAnimationFrame(animateSpark);
+                    } else {
+                        spark.remove();
+                    }
+                }
+                
+                animateSpark();
+            }
+            
+            // إضافة تأثير تحريك عند تحريك الماوس
+            document.addEventListener('mousemove', function(e) {
+                const card = document.querySelector('.card');
+                const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+                const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+                
+                card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+            });
+            
+            // إعادة الكرت إلى وضعه الطبيعي عند ترك الماوس
+            document.querySelector('.card-container').addEventListener('mouseleave', function() {
+                const card = document.querySelector('.card');
+                card.style.transform = 'rotateY(0deg) rotateX(0deg)';
+                card.style.transition = 'transform 0.5s ease';
+                setTimeout(() => {
+                    card.style.transition = '';
+                }, 500);
+            });
+            
+            // التحكم في أزرار التمرير
+            const scrollUpBtn = document.getElementById('scrollUp');
+            const scrollDownBtn = document.getElementById('scrollDown');
+            
+            // تحديث حالة أزرار التمرير عند التمرير
+            function updateScrollButtons() {
+                const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+                const windowHeight = window.innerHeight;
+                const documentHeight = document.documentElement.scrollHeight;
+                
+                // إظهار/إخفاء زر التمرير للأعلى
+                if (scrollPosition > 100) {
+                    scrollUpBtn.classList.remove('hidden');
+                } else {
+                    scrollUpBtn.classList.add('hidden');
+                }
+                
+                // إظهار/إخفاء زر التمرير للأسفل
+                if (scrollPosition + windowHeight < documentHeight - 100) {
+                    scrollDownBtn.classList.remove('hidden');
+                } else {
+                    scrollDownBtn.classList.add('hidden');
+                }
+            }
+            
+            // التمرير للأعلى
+            scrollUpBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // التمرير للأسفل
+            scrollDownBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: document.documentElement.scrollHeight,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // تحديث أزرار التمرير عند تحريك الصفحة
+            window.addEventListener('scroll', updateScrollButtons);
+            
+            // تحديث أزرار التمرير عند تحجيم النافذة
+            window.addEventListener('resize', updateScrollButtons);
+            
+            // تهيئة أزرار التمرير عند التحميل
+            updateScrollButtons();
+            
+            // إضافة تأثير خاص للتمرير باستخدام المفاتيح
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+                    window.scrollBy({
+                        top: -window.innerHeight * 0.8,
+                        behavior: 'smooth'
+                    });
+                    e.preventDefault();
+                } else if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+                    window.scrollBy({
+                        top: window.innerHeight * 0.8,
+                        behavior: 'smooth'
+                    });
+                    e.preventDefault();
+                } else if (e.key === 'Home') {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                } else if (e.key === 'End') {
+                    window.scrollTo({
+                        top: document.documentElement.scrollHeight,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+            
+            // إضافة تأثير تموج عند النقر على أزرار التمرير
+            [scrollUpBtn, scrollDownBtn].forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    const ripple = document.createElement('span');
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+                    
+                    ripple.style.width = ripple.style.height = `${size}px`;
+                    ripple.style.left = `${x}px`;
+                    ripple.style.top = `${y}px`;
+                    ripple.classList.add('ripple');
+                    
+                    this.appendChild(ripple);
+                    
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
